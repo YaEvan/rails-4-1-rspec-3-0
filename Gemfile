@@ -1,3 +1,4 @@
+# coding: utf-8
 source 'https://gems.ruby-china.org'
 
 
@@ -28,7 +29,9 @@ gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
   gem 'byebug'
+  # 封装RSpec
   gem 'rspec-rails', '~> 3.5'
+  # 测试数据使用的固件
   gem 'factory_girl_rails', '~> 4.8'
 end
 
@@ -40,10 +43,15 @@ group :development do
 end
 
 group :test do
+  # 预购件内容生成器
   gem 'faker', '~> 1.7', '>= 1.7.3'
+  # 模拟用户和程序之间的操作
   gem 'capybara', '~> 2.14'
+  # 清理测试数据库
   gem 'database_cleaner', '~> 1.6', '>= 1.6.1'
+  # 打开默认浏览器并显示当前渲染页面
   gem 'launchy', '~> 2.4', '>= 2.4.3'
+  # 结合Capybara测试基于js的交互操作
   gem 'selenium-webdriver', '~> 3.4'
 end
 
