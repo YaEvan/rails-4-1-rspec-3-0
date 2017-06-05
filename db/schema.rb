@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20140606043459) do
 
-  create_table "contacts", force: true do |t|
+  create_table "contacts", force: :cascade do |t|
     t.string   "firstname"
     t.string   "lastname"
     t.string   "email"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20140606043459) do
     t.datetime "updated_at"
   end
 
-  create_table "phones", force: true do |t|
+  create_table "phones", force: :cascade do |t|
     t.integer  "contact_id"
     t.string   "phone"
     t.string   "phone_type"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20140606043459) do
 
   add_index "phones", ["contact_id"], name: "index_phones_on_contact_id"
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "email"
     t.string   "password_digest"
     t.datetime "created_at"
