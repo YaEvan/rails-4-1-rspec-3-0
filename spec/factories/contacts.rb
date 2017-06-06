@@ -1,3 +1,4 @@
+# coding: utf-8
 require 'faker'
 
 FactoryGirl.define do
@@ -11,6 +12,10 @@ FactoryGirl.define do
       [:home_phone, :work_phone, :mobile_phone].each do |phone|
         contact.phones << FactoryGirl.build(:phone, phone_type: phone, contact: contact)
       end
+    end
+    # 子预购件会继承父预购件的全部属性
+    factory :invalid_contact do
+      firstname nil
     end
   end
 end
