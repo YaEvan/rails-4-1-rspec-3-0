@@ -33,6 +33,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5'
   # 测试数据使用的固件
   gem 'factory_girl_rails', '~> 4.8'
+
+  gem 'guard-rspec', '~> 4.7', '>= 4.7.3'
 end
 
 group :development do
@@ -53,6 +55,10 @@ group :test do
   gem 'launchy', '~> 2.4', '>= 2.4.3'
   # 结合Capybara测试基于js的交互操作
   gem 'selenium-webdriver', '~> 3.4'
+
+  gem 'shoulda-matchers', '~> 3.1'
+
+  gem 'spring-commands-rspec', '~> 1.0', '>= 1.0.4'
 end
 
 # Use unicorn as the app server
